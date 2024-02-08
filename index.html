@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spinner</title>
+  <style>
+    #bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: slide 10s linear infinite;
+    }
+  </style>
+</head>
+<body>
+    <img id="bg-img">
+    <script>
+        let currentImageIndex = 1;
+        const bgImg = document.getElementById('bg-img');
+        setInterval(function() {
+            bgImg.src = `https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,g_center,h_417,q_auto,w_741/c_pad,h_417,w_741/v1/360/7211474-${currentImageIndex <= 9 ? "0"+currentImageIndex : currentImageIndex}?pgw=1`;
+            currentImageIndex++;
+            if (currentImageIndex > 20) {
+                currentImageIndex = 1;
+            }
+        }, 100);
+    </script>
+</body>
+</html>
