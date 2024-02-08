@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-    <img id="bg-img">
+    <img id="bg-img" src="https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F7211474-01?pgw=1">
     <script>
         let currentImageIndex = 1;
         const bgImg = document.getElementById('bg-img');
@@ -25,7 +25,7 @@
             bgImg.src = `https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,g_center,h_417,q_auto,w_741/c_pad,h_417,w_741/v1/360/7211474-${currentImageIndex <= 9 ? "0"+currentImageIndex : currentImageIndex}?pgw=1`;
             currentImageIndex++;
             if (currentImageIndex > 20) {
-                currentImageIndex = 1;
+                currentImageIndex = 0;
             }
         }, 100);
     </script>
